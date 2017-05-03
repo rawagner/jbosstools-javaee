@@ -10,12 +10,11 @@
  ******************************************************************************/
 package org.jboss.tools.jsf.reddeer.ui;
 
-import org.jboss.reddeer.jface.wizard.ImportWizardDialog;
+import org.jboss.reddeer.eclipse.topmenu.ImportMenuWizard;
 
-public class ImportJSFWarWizard extends ImportWizardDialog {
+public class ImportJSFWarWizard extends ImportMenuWizard {
 
 	public ImportJSFWarWizard() {
-		super("Other", "JSF Project From *.war");
+		super("Import JSF Project", "Other", "JSF Project From *.war");
 	}
-
 }

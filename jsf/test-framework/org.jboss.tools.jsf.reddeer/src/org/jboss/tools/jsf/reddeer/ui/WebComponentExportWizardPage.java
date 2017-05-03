@@ -11,11 +11,11 @@
 package org.jboss.tools.jsf.reddeer.ui;
 
 import org.jboss.reddeer.common.wait.WaitWhile;
-import org.jboss.reddeer.core.condition.JobIsRunning;
 import org.jboss.reddeer.swt.impl.button.CheckBox;
 import org.jboss.reddeer.swt.impl.button.FinishButton;
 import org.jboss.reddeer.swt.impl.combo.LabeledCombo;
 import org.jboss.reddeer.swt.impl.shell.DefaultShell;
+import org.jboss.reddeer.workbench.core.condition.JobIsRunning;
 
 public class WebComponentExportWizardPage extends DefaultShell {
 
