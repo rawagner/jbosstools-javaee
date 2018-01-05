@@ -445,6 +445,7 @@ try {
 				projectsWithBeansXml.add(beansXml.getProject().getName());
 			}
 			Set<IProject> allProjects = projectSet.getAllProjects();
+			System.out.println("num of projects :"+allProjects.size());
 			for (IProject project : allProjects) {
 				removeAllMessagesFromProject(project);
 				CDIValidationContext context = getCDIContext(project);
@@ -480,12 +481,13 @@ try {
 	@Override
 	public IStatus validateAll(IProject project, ContextValidationHelper validationHelper, IProjectValidationContext context, ValidatorManager manager, IReporter reporter)
 			throws ValidationException {
+		System.out.println("validation");
 		init(project, validationHelper, context, manager, reporter);
 
 		if (rootCdiProject == null) {
 			return OK_STATUS;
 		}
-
+		System.out.println("validation1");
 		for (IProject iProject : projectSet.getAllProjects()) {
 			if(notValidatedYet(iProject)) {
 				removeAllMessagesFromResource(iProject);
